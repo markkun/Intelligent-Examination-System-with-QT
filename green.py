@@ -32,10 +32,10 @@ def trick_commit(year, month, day):
 
 
 def daily_commit(start_date, end_date):
-    for i in range(((end_date - start_date).days + 1)):
-        cur_date = start_date + datetime.timedelta(days=i)
+    for i in range(((end_date - start_date).days + 1)/3):
+        cur_date = start_date + datetime.timedelta(days=i*3)
 	for j in range(4):
 	    trick_commit(cur_date.year, cur_date.month, cur_date.day)
 	
 if __name__ == '__main__':
-    daily_commit(datetime.date(2018, 7, 15), datetime.date(2018, 7, 17))
+    daily_commit(datetime.date(2018, 6, 15), datetime.date(2018, 7, 5))
