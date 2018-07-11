@@ -17,7 +17,8 @@ def modify():
 
 
 def commit():
-    os.system('git commit -a -m test_github_streak > /dev/null 2>&1')
+    os.system('git commit -a -m change')
+    os.system('git push')
 
 
 def set_sys_time(year, month, day):
@@ -37,4 +38,4 @@ def daily_commit(start_date, end_date):
 
 
 if __name__ == '__main__':
-    daily_commit(datetime.date(2018, 7, 11), datetime.date(2018, 7, 15))
+    daily_commit(datetime.date(2018, 7, 12), datetime.date(2018, 7, 15))
