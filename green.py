@@ -9,7 +9,7 @@ def modify():
     flag = file.readline()
     file.close()
     file = open('README.md', 'w+')
-    if flag==0:
+    if flag=='0':
         file.write('1')
     else:
         file.write('0')
@@ -18,7 +18,7 @@ def modify():
 
 def commit():
     os.system('git commit -a -m change')
-    os.system('git push')
+   ## os.system('git push')
 
 
 def set_sys_time(year, month, day):
@@ -38,4 +38,4 @@ def daily_commit(start_date, end_date):
 
 
 if __name__ == '__main__':
-    daily_commit(datetime.date(2018, 7, 12), datetime.date(2018, 7, 15))
+    daily_commit(datetime.date(2018, 7, 15), datetime.date(2018, 7, 18))
